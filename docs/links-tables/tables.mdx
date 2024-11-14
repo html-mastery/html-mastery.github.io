@@ -1,0 +1,297 @@
+---
+sidebar_position: 2
+---
+
+# 🙋🏻 HTML Tables
+
+HTML tables are used to display data in rows and columns on a web page. They allow you to organize and present information in a structured format, making it easier for users to read and understand. In this tutorial, you will learn how to create tables in HTML and customize their appearance and layout.
+
+## Creating Tables
+
+HTML tables are created using the `<table>` element. The `<table>` element defines the structure of the table and contains one or more rows, which are defined using the `<tr>` element. Each row can contain one or more cells, which are defined using the `<td>` element for data cells and the `<th>` element for header cells.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table Example</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Employee Directory</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Salary</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>Software Engineer</td>
+        <td>$80,000</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>Product Manager</td>
+        <td>$100,000</td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <h1>Employee Directory</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Salary</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>Software Engineer</td>
+        <td>$80,000</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>Product Manager</td>
+        <td>$100,000</td>
+      </tr>
+    </table>
+  </div>
+</BrowserWindow>
+
+In the example above, a simple table is created to display an employee directory. The `<table>` element contains three rows: a header row with column headings, and two data rows with employee information. The `<th>` element is used to define header cells, while the `<td>` element is used to define data cells.
+
+## Table Attributes
+
+HTML tables support several attributes that allow you to customize their appearance and behavior. Some common attributes include:
+
+- `border`: Specifies the width of the table border. The value "0" hides the border.
+- `cellpadding`: Specifies the padding between the cell content and the cell border.
+- `cellspacing`: Specifies the spacing between cells.
+- `width`: Specifies the width of the table.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table Attributes Example</title>
+    <style>
+      table {
+        border: 1px solid black;
+        width: 50%;
+      }
+
+      th, td {
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Employee Directory</h1>
+    <table border="1" cellpadding="10" cellspacing="0">
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Salary</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>Software Engineer</td>
+        <td>$80,000</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>Product Manager</td>
+        <td>$100,000</td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <h1>Employee Directory</h1>
+    <table border="1" cellpadding="10" cellspacing="0">
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Salary</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>Software Engineer</td>
+        <td>$80,000</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>Product Manager</td>
+        <td>$100,000</td>
+      </tr>
+    </table>
+  </div>
+</BrowserWindow>
+
+In the example above, the `<table>` element has the `border`, `cellpadding`, `cellspacing`, and `width` attributes set to customize the appearance of the table. The `border` attribute specifies the width of the table border, the `cellpadding` attribute specifies the padding between the cell content and the cell border, the `cellspacing` attribute specifies the spacing between cells, and the `width` attribute specifies the width of the table.
+
+## Spanning Rows and Columns
+
+You can span rows and columns in an HTML table using the `rowspan` and `colspan` attributes. The `rowspan` attribute specifies the number of rows a cell should span, while the `colspan` attribute specifies the number of columns a cell should span.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spanning Rows and Columns Example</title>
+    <style>
+      table {
+        border: 1px solid black;
+        width: 50%;
+      }
+
+      th, td {
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Employee Directory</h1>
+    <table border="1" cellpadding="10" cellspacing="0">
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Salary</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>Software Engineer</td>
+        <td>$80,000</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td colspan="2">Product Manager</td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <h1>Employee Directory</h1>
+    <table border="1" cellpadding="10" cellspacing="0">
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Salary</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>Software Engineer</td>
+        <td>$80,000</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td colspan="2">Product Manager</td>
+      </tr>
+    </table>
+  </div>
+</BrowserWindow>
+
+In the example above, the `<td>` element containing "Product Manager" spans two columns using the `colspan` attribute. This causes the cell to take up the space of two columns in the table.
+
+## Styling Tables
+
+HTML tables can be styled using CSS to change their appearance, such as the border color, cell padding, and text alignment. You can use CSS to customize the appearance of tables to match the design of your website.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Styled Table Example</title>
+    <style>
+      table {
+        border: 2px solid blue;
+        width: 50%;
+        border-collapse: collapse;
+      }
+
+      th, td {
+        border: 1px solid blue;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Employee Directory</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Salary</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>Software Engineer</td>
+        <td>$80,000</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>Product Manager</td>
+        <td>$100,000</td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <h1>Employee Directory</h1>
+    <table style={{width: "50%", borderCollapse: "collapse", padding: "0"}}>
+      <tr>
+        <th style={{backgroundColor: "lightblue", color:"#000", border: "1px solid blue"}}>Name</th>
+        <th style={{backgroundColor: "lightblue", color:"#000", border: "1px solid blue"}}>Position</th>
+        <th style={{backgroundColor: "lightblue", color:"#000", border: "1px solid blue"}}>Salary</th>
+      </tr>
+      <tr>
+        <td style={{padding: "8px", textAlign: "left", border: "1px solid blue"}}>John Doe</td>
+        <td style={{padding: "8px", textAlign: "left", border: "1px solid blue"}}>Software Engineer</td>
+        <td style={{padding: "8px", textAlign: "left", border: "1px solid blue"}}>$80,000</td>
+      </tr>
+      <tr>
+        <td style={{padding: "8px", textAlign: "left", border: "1px solid blue"}}>Jane Smith</td>
+        <td style={{padding: "8px", textAlign: "left", border: "1px solid blue"}}>Product Manager</td>
+        <td style={{padding: "8px", textAlign: "left", border: "1px solid blue"}}>$100,000</td>
+      </tr>
+    </table>
+  </div>
+</BrowserWindow>
+
+In the example above, the `<table>`, `<th>`, and `<td>` elements are styled using CSS to change the border color, cell padding, text alignment, and background color. The `border` property is used to set the border color and width, the `padding` property is used to set the padding inside cells, the `text-align` property is used to align text within cells, and the `background-color` property is used to set the background color of header cells.
+
+## Summary
+
+HTML tables are a powerful tool for organizing and presenting data on a web page. By using the `<table>`, `<tr>`, `<th>`, and `<td>` elements, you can create structured tables that make it easy for users to read and understand information. You can customize the appearance and layout of tables using attributes and CSS to match the design of your website. Tables are commonly used in websites to display data such as product listings, pricing tables, and schedules.

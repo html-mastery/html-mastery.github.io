@@ -1,0 +1,106 @@
+---
+sidebar_position: 12
+---
+
+# 🙋🏻 HTML Ids
+
+HTML IDs are used to uniquely identify elements on a web page. By assigning an ID to an element, you can reference that element in CSS and JavaScript to apply styles or perform actions. IDs are a powerful tool for targeting specific elements and adding interactivity to web pages.
+
+## Creating IDs
+
+To create an ID in HTML, you use the `id` attribute on an HTML element. The `id` attribute specifies a unique identifier for an element, which must be unique within the entire HTML document. You can assign an ID to any HTML element, such as headings, paragraphs, images, links, and more.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ID Example</title>
+    <style>
+      #heading {
+        color: blue;
+      }
+
+      #paragraph {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">This is a Heading</h1>
+    <p id="paragraph">This is a paragraph.</p>
+  </body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <h1 style={{color: "blue"}}>This is a Heading</h1>
+    <p style={{fontSize: "16px"}}>This is a paragraph.</p>
+  </div>
+</BrowserWindow>
+
+In the example above, two IDs are defined in the `<style>` section of the HTML document: `#heading` and `#paragraph`. These IDs define styles for text color and font size, respectively. The IDs are then applied to the `<h1>` and `<p>` elements using the `id` attribute.
+
+## Referencing IDs
+
+You can reference an element by its ID in CSS and JavaScript to apply styles or perform actions on that element. To reference an element by its ID in CSS, you use the `#` symbol followed by the ID name. To reference an element by its ID in JavaScript, you can use the `document.getElementById()` method.
+
+<Tabs>
+<TabItem value="html" label="index.html">
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ID Example</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="heading">This is a Heading</h1>
+    <p id="paragraph">This is a paragraph.</p>
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+</TabItem>
+<TabItem value="css" label="styles.css">
+
+```css
+#heading {
+  color: blue;
+}
+
+#paragraph {
+  font-size: 16px;
+}
+
+```
+
+</TabItem>
+
+<TabItem value="js" label="script.js">
+
+```js
+// Get the element with the ID "heading"
+var heading = document.getElementById("heading");
+// Change the text color of the heading
+heading.style.color = "red";
+```
+
+</TabItem>
+
+</Tabs>
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <h1 style={{color: "red"}}>This is a Heading</h1>
+    <p style={{fontSize: "16px"}}>This is a paragraph.</p>
+  </div>
+</BrowserWindow>
+
+In the example above, the `#heading` ID is referenced in the `styles.css` file to change the text color of the `<h1>` element to blue. The `#heading` ID is also referenced in the `script.js` file to change the text color of the `<h1>` element to red using JavaScript.
+
+## Summary
+
+HTML IDs are used to uniquely identify elements on a web page. By assigning an ID to an element, you can reference that element in CSS and JavaScript to apply styles or perform actions. IDs are a powerful tool for targeting specific elements and adding interactivity to web pages.

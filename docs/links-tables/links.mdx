@@ -1,0 +1,189 @@
+---
+sidebar_position: 1
+---
+
+# 🙋🏻 HTML Links
+
+HTML links, also known as hyperlinks, are used to navigate between web pages and resources. By creating links in your HTML documents, you can connect different pages, websites, and content together, providing a seamless browsing experience for users. In this tutorial, you will learn how to create links in HTML and customize their appearance and behavior.
+
+## Creating Links
+
+HTML links are created using the `<a>` (anchor) element. The `<a>` element is used to define a hyperlink that points to a specific URL or resource. To create a link, you need to specify the destination URL using the `href` attribute within the `<a>` element.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Link Example</title>
+  </head>
+  <body>
+    <h1>This is a Heading</h1>
+    <a href="https://codeharborhub.github.io">Visit Example</a>
+  </body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <h1>This is a Heading</h1>
+    <a href="https://codeharborhub.github.io">Visit Example</a>
+  </div>
+</BrowserWindow>
+
+In the example above, the `<a>` element is used to create a link with the text "Visit Example". The `href` attribute specifies the destination URL that the link points to. When the link is clicked, the browser will navigate to the specified URL.
+
+## Linking to Internal Pages
+
+You can also create links to other pages within the same website or document using relative URLs. Relative URLs specify the path to the target page relative to the current page. This allows you to create links to different sections of your website without specifying the full URL.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Internal Link Example</title>
+  </head>
+  <body>
+    <h1>This is a Heading</h1>
+    <a href="/blog/">Visit Blog</a>
+  </body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <h1>This is a Heading</h1>
+    <a href="/blog/">Visit Blog</a>
+  </div>
+</BrowserWindow>
+
+In the example above, the `<a>` element creates a link to the "/blog/" page within the same website. The relative URL "/blog/" specifies the path to the target page relative to the current page.
+
+## Linking to Sections of a Page
+
+HTML links can also be used to navigate to specific sections of a web page by using anchor tags. Anchor tags are used to define specific points within a page that can be linked to. By creating anchor tags with unique IDs, you can create links that navigate to specific sections of a page.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Section Link Example</title>
+  </head>
+  <body>
+    <h1>This is a Heading</h1>
+    <a href="#section1">Go to Section 1</a>
+    <h2 id="section1">Section 1</h2>
+    <p>This is the content of Section 1.</p>
+  </body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <h1>This is a Heading</h1>
+    <a href="#section1">Go to Section 1</a>
+    <h2 id="section1">Section 1</h2>
+    <p>This is the content of Section 1.</p>
+  </div>
+</BrowserWindow>
+
+In the example above, the `<a>` element creates a link that navigates to the section with the ID "section1" within the same page. The `href` attribute specifies the anchor tag ID preceded by the "#" symbol. When the link is clicked, the browser will scroll to the specified section of the page.
+
+## Linking to Email Addresses
+
+HTML links can also be used to create email links that open the default email client with a pre-filled email address. Email links are created using the `mailto:` protocol followed by the email address in the `href` attribute.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Email Link Example</title>
+  </head>
+  <body>
+    <h1>This is a Heading</h1>
+    <a href="mailto:example@gmail.com">Send Email</a>
+    </body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <h1>This is a Heading</h1>
+    <a href="mailto:example@gmail.com">Send Email</a>
+  </div>
+</BrowserWindow>
+
+In the example above, the `<a>` element creates an email link that opens the default email client with the pre-filled email address "
+
+## Link Attributes
+
+HTML links can have additional attributes that control their appearance and behavior. Some common attributes used with links include:
+
+- `target`: Specifies where to open the linked document. The value "_blank" opens the link in a new tab or window.
+- `title`: Specifies additional information about the link that is displayed as a tooltip when the user hovers over the link.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Link Attributes Example</title>
+  </head>
+  <body>
+    <h1>This is a Heading</h1>
+    <a href="https://codeharborhub.github.io" target="_blank" title="Visit Example">Visit Example</a>
+  </body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <h1>This is a Heading</h1>
+    <a href="https://codeharborhub.github.io" target="_blank" title="Visit Example">Visit Example</a>
+  </div>
+</BrowserWindow>
+
+In the example above, the `<a>` element has the `target` attribute set to "_blank", which opens the link in a new tab or window. The `title` attribute provides additional information about the link that is displayed as a tooltip when the user hovers over the link.
+
+## Styling Links
+
+HTML links can be styled using CSS to change their appearance, such as the text color, font size, and decoration. You can use CSS to customize the appearance of links to match the design of your website.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Styled Link Example</title>
+    <style>
+      a {
+        color: blue;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: red;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is a Heading</h1>
+    <a href="https://codeharborhub.github.io">Visit Example</a>
+  </body>
+</html>
+```
+
+In the example above, the `<a>` element is styled using CSS to change the text color to blue and remove the underline decoration. The `:hover` pseudo-class is used to change the text color to red and add an underline decoration when the link is hovered over.
+
+:::tip
+
+**Links `target` attribute values:**
+
+- `_blank`: Opens the linked document in a new window or tab.
+- `_self`: Opens the linked document in the same frame or window.
+- `_parent`: Opens the linked document in the parent frame.
+- `_top`: Opens the linked document in the full body of the window.
+
+:::
+
+## Summary
+
+HTML links are essential for creating a connected and interactive web experience. By using the `<a>` element, you can create links to navigate between web pages, sections of a page, email addresses, and external resources. Understanding how to create and style links in HTML is key to building user-friendly and engaging websites.

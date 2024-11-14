@@ -1,0 +1,132 @@
+---
+sidebar_position: 11
+---
+
+# 🙋🏻 HTML Classes
+
+HTML classes are used to apply styles and attributes to HTML elements. By assigning a class to an element, you can define specific styles for that element using CSS. Classes are a powerful tool for styling web pages and creating visually appealing designs.
+
+## Creating Classes
+
+To create a class in HTML, you use the `class` attribute on an HTML element. The `class` attribute specifies one or more class names for an element, separated by spaces. You can assign the same class to multiple
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class Example</title>
+    <style>
+      .red-text {
+        color: red;
+      }
+
+      .bold-text {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="red-text">This is a Heading</h1>
+    <p class="red-text bold-text">This is a paragraph.</p>
+  </body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <h1 style={{color: "red"}}>This is a Heading</h1>
+    <p style={{color: "red", fontWeight: "bold"}}>This is a paragraph.</p>
+  </div>
+</BrowserWindow>
+
+In the example above, two classes are defined in the `<style>` section of the HTML document: `.red-text` and `.bold-text`. These classes define styles for text color and font weight, respectively. The classes are then applied to the `<h1>` and `<p>` elements using the `class` attribute.
+
+## Applying Multiple Classes
+
+You can apply multiple classes to an HTML element by separating the class names with spaces. When multiple classes are applied to an element, the styles defined in each class are combined to create the final appearance of the element.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple Classes Example</title>
+    <style>
+      .red-text {
+        color: red;
+      }
+
+      .bold-text {
+        font-weight: bold;
+      }
+
+      .underline-text {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="red-text bold-text underline-text">This is a paragraph.</p>
+  </body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <p style={{color: "red", fontWeight: "bold", textDecoration: "underline"}}>
+     This is a paragraph.
+    </p>
+  </div>
+</BrowserWindow>
+
+In the example above, three classes are defined in the `<style>` section of the HTML document: `.red-text`, `.bold-text`, and `.underline-text`. These classes define styles for text color, font weight, and text decoration, respectively. All three classes are applied to the `<p>` element using the `class` attribute.
+
+## Using Classes with CSS
+
+Classes are commonly used with CSS to style HTML elements. By defining styles in CSS and applying them to elements using classes, you can create consistent and visually appealing designs for your web pages.
+
+<Tabs>
+ <TabItem value="css" label="styles.css">
+```css title="styles.css"
+.red-text {
+  color: red;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+```
+ </TabItem>
+ <TabItem value="html" label="index.html">
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple Classes Example</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <p class="red-text bold-text underline-text">This is a paragraph.</p>
+  </body>
+</html>
+```
+ </TabItem>
+
+</Tabs>
+
+<BrowserWindow url="http://.../index.html">
+  <div>
+    <p style={{color: "red", fontWeight: "bold", textDecoration: "underline"}}>
+     This is a paragraph.
+    </p>
+  </div>
+</BrowserWindow>
+
+In the example above, the styles for the classes `.red-text`, `.bold-text`, and `.underline-text` are defined in an external CSS file named `styles.css`. The classes are then applied to the `<p>` element in the HTML document using the `class` attribute.
+
+## Summary
+
+HTML classes are used to apply styles and attributes to HTML elements. By assigning classes to elements, you can define specific styles for those elements using CSS. Classes are a powerful tool for styling web pages and creating visually appealing designs. By combining classes and CSS, you can create consistent and visually appealing designs for your web pages.
