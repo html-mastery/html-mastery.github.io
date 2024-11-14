@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# HTML Mastery Docs
+# 🙋‍♂️ HTML Mastery Docs
 
 This is the documentation for the HTML Mastery Tutorial (docs) website. You can learn all concepts of HTML from this website.
 

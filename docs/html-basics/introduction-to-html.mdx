@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Introduction to HTML
+# 🙋🏻 Introduction to HTML 
 
 HTML stands for **Hyper Text Markup Language**. It is the standard markup language for creating Web pages. It describes the structure of Web pages using markup.
 
@@ -26,10 +26,73 @@ The end tag is written like the start tag, but with a forward slash inserted bef
 </html>
 ```
 
+<BrowserWindow url="http://127.0.0.1:5500/index.html">
+  <div>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+  </div>
+
+</BrowserWindow>
+
 In the example above, the `<html>` tag is the root element of the HTML document. The `<head>` element contains meta-information about the document, such as its title. The `<title>` element specifies a title for the document. The `<body>` element contains the visible page content. The `<h1>` element defines a large heading. The `<p>` element defines a paragraph.
 
 HTML documents are saved in `.html` or `.htm` file extension. The file extension is not mandatory, but it is a good practice to use it.
 
 HTML documents are text files that can be created using any text editor. You can use Notepad, Notepad++, Sublime Text, Visual Studio Code, or any other text editor to create HTML documents.
 
-In the next section, we will learn how to create an HTML document and view it in a web browser.
+## HTML Page Structure
+
+An HTML document consists of the following parts:
+
+<div style={{border: "1px solid #ccc", padding: "1rem", marginBottom: "1rem"}}>
+
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+  <div style={{border: "1px solid #ccc", padding: "1rem", marginBottom: "1rem"}}>
+    
+    &lt;head&gt;
+
+    <div style={{border: "1px solid #ccc", padding: "1rem", marginBottom: "1rem"}}>
+
+      &lt;title&gt;Page Title&lt;/title&gt;
+
+    </div>
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+  <div style={{border: "1px solid #ccc", padding: "1rem", marginBottom: "1rem"}}>
+
+    &lt;h1&gt;This is a Heading&lt;h1&gt;
+
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+    &lt;!-- More content goes here --&gt;
+
+    </div>
+
+  &lt;/body&gt;
+
+  </div>
+
+  &lt;/html&gt;
+</div>
+
+<br />
+
+In this structure:
+
+- The `<!DOCTYPE html>` declaration defines the document type and version of HTML.
+- The `<html>` element is the root element of an HTML page.
+- The `<head>` element contains meta-information about the document, such as its title.
+- The `<title>` element specifies a title for the document.
+- The `<body>` element contains the visible page content.
+- The `<h1>` element defines a large heading.
+- The `<p>` element defines a paragraph.
+
+## Summary
+
+HTML is the standard markup language for creating Web pages. It describes the structure of Web pages using markup. HTML elements are the building blocks of HTML pages and are delineated by tags, written using angle brackets. HTML tags normally come in pairs like `<p>` and `</p>`. The first tag in a pair is the start tag, the second tag is the end tag. HTML documents are saved in `.html` or `.htm` file extension and can be created using any text editor. An HTML document consists of the `<!DOCTYPE html>` declaration, `<html>`, `<head>`, `<title>`, and `<body>` elements.

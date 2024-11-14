@@ -1,0 +1,47 @@
+{
+  "name": "HTML Mastery",
+  "short_name": "HTML Mastery",
+  "theme_color": "#2196f3",
+  "background_color": "#424242",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./index.html",
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://html-mastery.github.io///manifest.json"
+    }
+  ],
+  "icons": [
+    {
+      "src": "img/favicons/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/favicons/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "img/favicons/logo-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "img/favicons/logo-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "img/favicons/logo-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "img/favicons/logo-192.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
