@@ -1,23 +1,91 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
+  background: linear-gradient(135deg, #4c6ef53a, #15abbf33);
   padding: 4rem 0;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  border-radius: 12px;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroContent {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.buttons {
+/* .heroLogo {
+  max-width: 200px;
+  margin-bottom: 1rem;
+} */
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.buttonsContainer {
   display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.githubButtonContainer {
+  margin-top: 2rem;
+}
+
+.featuresSection {
+  padding: 2rem;
+  text-align: center;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.featureItem {
+  background-color: #f1f3f5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.featureItem:hover {
+  transform: translateY(-10px);
+}
+
+[data-theme='dark'] .heroBanner {
+  background: linear-gradient(135deg, #23294632, #1d355727);
+}
+
+[data-theme='dark'] .featureItem {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+[data-theme='dark'] .getStartedButton {
+  background-color: #3a3a3a;
+  color: #f1faee;
+}
+
+[data-theme='dark'] .exploreButton {
+  background-color: #457b9d;
+  color: #f1faee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
 }

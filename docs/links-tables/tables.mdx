@@ -125,29 +125,6 @@ HTML tables support several attributes that allow you to customize their appeara
 </html>
 ```
 
-<BrowserWindow url="http://.../index.html">
-  <div>
-    <h1>Employee Directory</h1>
-    <table border="1" cellpadding="10" cellspacing="0">
-      <tr>
-        <th>Name</th>
-        <th>Position</th>
-        <th>Salary</th>
-      </tr>
-      <tr>
-        <td>John Doe</td>
-        <td>Software Engineer</td>
-        <td>$80,000</td>
-      </tr>
-      <tr>
-        <td>Jane Smith</td>
-        <td>Product Manager</td>
-        <td>$100,000</td>
-      </tr>
-    </table>
-  </div>
-</BrowserWindow>
-
 In the example above, the `<table>` element has the `border`, `cellpadding`, `cellspacing`, and `width` attributes set to customize the appearance of the table. The `border` attribute specifies the width of the table border, the `cellpadding` attribute specifies the padding between the cell content and the cell border, the `cellspacing` attribute specifies the spacing between cells, and the `width` attribute specifies the width of the table.
 
 ## Spanning Rows and Columns
@@ -192,28 +169,6 @@ You can span rows and columns in an HTML table using the `rowspan` and `colspan`
   </body>
 </html>
 ```
-
-<BrowserWindow url="http://.../index.html">
-  <div>
-    <h1>Employee Directory</h1>
-    <table border="1" cellpadding="10" cellspacing="0">
-      <tr>
-        <th>Name</th>
-        <th>Position</th>
-        <th>Salary</th>
-      </tr>
-      <tr>
-        <td>John Doe</td>
-        <td>Software Engineer</td>
-        <td>$80,000</td>
-      </tr>
-      <tr>
-        <td>Jane Smith</td>
-        <td colspan="2">Product Manager</td>
-      </tr>
-    </table>
-  </div>
-</BrowserWindow>
 
 In the example above, the `<td>` element containing "Product Manager" spans two columns using the `colspan` attribute. This causes the cell to take up the space of two columns in the table.
 
