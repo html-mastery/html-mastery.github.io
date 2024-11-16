@@ -1,0 +1,144 @@
+---
+sidebar_position: 2
+---
+
+# 🙋🏻 HTML Form elements
+
+Forms in HTML consist of various elements that help gather user input efficiently. This guide covers the most commonly used form elements, explaining their attributes, usage, and examples to help you build user-friendly web forms.
+
+## 🔤 Text Input Elements
+
+### Single-line Text Input
+The `<input type="text">` element is used for basic, single-line text fields.
+
+```html title="text-input.html"
+<form>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" placeholder="Enter your username" required>
+</form>
+```
+
+### Password Input
+The `<input type="password">` element masks user input, ideal for password fields.
+
+```html title="password-input.html"
+<form>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+</form>
+```
+
+### Email Input
+The `<input type="email">` element ensures that the input matches the standard email format.
+
+```html title="email-input.html"
+<form>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="example@example.com" required>
+</form>
+```
+
+### Number Input
+The `<input type="number">` element is for numeric input and can include attributes like `min`, `max`, and `step`.
+
+```html title="number-input.html"
+<form>
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age" min="1" max="120">
+</form>
+```
+
+## 📝 Multi-line Text Input
+The `<textarea>` element allows users to input multiple lines of text.
+
+```html title="textarea-example.html"
+<form>
+  <label for="comments">Comments:</label>
+  <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+</form>
+```
+
+## 🔘 Radio Buttons and Checkboxes
+
+### Radio Buttons
+Radio buttons are used when only one option from a set is needed.
+
+```html title="radio-buttons.html"
+<form>
+  <p>Choose your favorite color:</p>
+  <input type="radio" id="red" name="color" value="red">
+  <label for="red">Red</label><br>
+
+  <input type="radio" id="blue" name="color" value="blue">
+  <label for="blue">Blue</label><br>
+
+  <input type="radio" id="green" name="color" value="green">
+  <label for="green">Green</label>
+</form>
+```
+
+### Checkboxes
+Checkboxes allow users to select multiple options.
+
+```html title="checkboxes.html"
+<form>
+  <p>Select your hobbies:</p>
+  <input type="checkbox" id="sports" name="hobby" value="sports">
+  <label for="sports">Sports</label><br>
+
+  <input type="checkbox" id="reading" name="hobby" value="reading">
+  <label for="reading">Reading</label><br>
+
+  <input type="checkbox" id="music" name="hobby" value="music">
+  <label for="music">Music</label>
+</form>
+```
+
+## 🔽 Dropdown Lists
+The `<select>` element is used to create a dropdown list.
+
+```html title="dropdown-example.html"
+<form>
+  <label for="country">Choose your country:</label>
+  <select id="country" name="country">
+    <option value="usa">United States</option>
+    <option value="canada">Canada</option>
+    <option value="uk">United Kingdom</option>
+  </select>
+</form>
+```
+
+## 📅 Date and Time Inputs
+
+### Date Input
+The `<input type="date">` element lets users pick a date from a calendar.
+
+```html title="date-input.html"
+<form>
+  <label for="dob">Date of Birth:</label>
+  <input type="date" id="dob" name="dob">
+</form>
+```
+
+### Time Input
+The `<input type="time">` element is for selecting time.
+
+```html title="time-input.html"
+<form>
+  <label for="appt">Select a time:</label>
+  <input type="time" id="appt" name="appt">
+</form>
+```
+
+## 🖱 Buttons
+Buttons can be created using the `<button>` element or `<input>` with `type="button"`, `submit`, or `reset`.
+
+```html title="buttons-example.html"
+<form>
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</form>
+```
+
+## 📝 Summary
+HTML provides a wide range of elements to create forms, each suited for different types of user input. Understanding how to use these elements effectively helps in building interactive and accessible forms.

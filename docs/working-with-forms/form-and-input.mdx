@@ -1,0 +1,142 @@
+---
+sidebar_position: 1
+---
+
+# 🙋🏻 HTML Form and Inputs
+
+Forms in HTML are a fundamental way to collect user input on web pages. They enable interaction between the user and the web server, allowing users to submit data, search, and perform various tasks. This guide covers the essential concepts of forms and inputs in HTML, including form structure, attributes, and basic usage.
+
+## 📋 What is an HTML Form?
+
+An HTML form is defined using the `<form>` element, which acts as a container for various input controls, such as text fields, radio buttons, checkboxes, and submit buttons. The form itself can be configured to handle data submission via different methods and actions.
+
+```html title="basic-form.html"
+<form action="/submit-form" method="post">
+  <label for="username">Username: </label>
+  <input type="text" id="username" name="username" required>
+  <input type="submit" value="Submit">
+</form>
+```
+
+### Explanation:
+- **`<form>`**: The main element that contains form controls.
+- **`action` attribute**: Specifies the URL where form data will be sent.
+- **`method` attribute**: Specifies the HTTP method (`get` or `post`).
+
+## 🔘 Common Form Elements
+
+### 1. Input Fields
+The `<input>` element is one of the most versatile elements in HTML forms. It can be used for various types of input, specified by the `type` attribute.
+
+```html title="input-elements.html"
+<form>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age" min="0" max="120">
+
+  <input type="submit" value="Register">
+</form>
+```
+
+### 2. Textarea
+The `<textarea>` element is used for multi-line text input.
+
+```html title="textarea-example.html"
+<form>
+  <label for="comments">Comments:</label>
+  <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+  <input type="submit" value="Submit">
+</form>
+```
+
+### 3. Select (Dropdown)
+The `<select>` element creates a dropdown list for users to choose from predefined options.
+
+```html title="select-example.html"
+<form>
+  <label for="options">Choose an option:</label>
+  <select id="options" name="options">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+  <input type="submit" value="Submit">
+</form>
+```
+
+### 4. Buttons
+Buttons can be defined using the `<button>` or `<input type="button">` elements.
+
+```html title="button-example.html"
+<form>
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</form>
+```
+
+## ✏️ Attributes of Input Elements
+
+### Commonly Used Attributes:
+- **`required`**: Ensures that the field must be filled before submission.
+- **`placeholder`**: Provides a hint to the user about what to enter.
+- **`value`**: Specifies the default value.
+- **`disabled`**: Disables the input, making it uneditable.
+- **`readonly`**: Makes the input read-only.
+
+```html title="input-attributes.html"
+<input type="text" placeholder="Enter your name" required>
+<input type="email" placeholder="Enter your email" value="example@example.com" readonly>
+```
+
+## 🌐 Form Submission
+
+The `method` attribute of the `<form>` tag can be set to:
+- **`get`**: Appends the form data to the URL. Typically used for non-sensitive data.
+- **`post`**: Sends data as a request body. Preferred for sensitive or large amounts of data.
+
+### Example:
+```html title="form-methods.html"
+<form action="/search" method="get">
+  <label for="query">Search:</label>
+  <input type="text" id="query" name="query">
+  <input type="submit" value="Search">
+</form>
+
+<form action="/submit-form" method="post">
+  <label for="feedback">Feedback:</label>
+  <textarea id="feedback" name="feedback"></textarea>
+  <input type="submit" value="Submit">
+</form>
+```
+
+## ✅ Form Best Practices
+- **Use labels** to associate text descriptions with input elements for accessibility.
+- **Group related fields** using the `<fieldset>` and `<legend>` tags.
+- **Provide feedback** to users for better form interaction.
+- **Validate inputs** both on the client-side using HTML attributes and JavaScript, and on the server-side for security.
+
+```html title="fieldset-example.html"
+<form>
+  <fieldset>
+    <legend>Personal Information</legend>
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" name="firstname" required>
+
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lastname" required>
+  </fieldset>
+
+  <input type="submit" value="Submit">
+</form>
+```
+
+By following these guidelines, you can create well-structured and user-friendly forms that improve the user experience and ensure reliable data collection.
+
+## 🚀 Summary
+
+This guide covered the basics of HTML forms and input elements, including form structure, common input types, attributes, and best practices. By understanding these concepts, you can create interactive web forms that enhance user engagement and data collection on your website.

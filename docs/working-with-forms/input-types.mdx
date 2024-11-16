@@ -1,0 +1,287 @@
+---
+sidebar_position: 3
+---
+
+# 🙋🏻 HTML Input Types
+
+HTML offers a wide variety of input types to cater to different user data needs, ensuring forms are both versatile and user-friendly. This guide covers various input types, their attributes, and examples for practical use.
+
+## 📄 Common Input Types
+
+### Text Input (`type="text"`)
+
+This input type is ideal for single-line text entries.
+
+```html title="text-input.html"
+<form>
+  <label for="username">Username: </label>
+  <input type="text" id="username" name="username" placeholder="Enter your username" required>
+</form>
+```
+
+<BrowserWindow url="http://.../text-input.html">
+  <div>
+    <form>
+      <label for="username">Username: </label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required />
+    </form>
+  </div>  
+</BrowserWindow>
+
+### Password Input (`type="password"`)
+
+For masking user input, such as passwords.
+
+```html title="password-input.html"
+<form>
+  <label for="password">Password: </label>
+  <input type="password" id="password" name="password" required>
+</form>
+```
+
+<BrowserWindow url="http://.../password-input.html">
+  <div>
+    <form>
+      <label for="password">Password: </label>
+      <input type="password" id="password" name="password" required />
+    </form>
+  </div>
+</BrowserWindow>
+
+### Email Input (`type="email"`)
+
+Ensures user input is formatted as an email address.
+
+```html title="email-input.html"
+<form>
+  <label for="email">Email: </label>
+  <input type="email" id="email" name="email" placeholder="example@example.com" required>
+</form>
+```
+
+<BrowserWindow url="http://.../email-input.html">
+  <div>
+    <form>
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" placeholder="eexample@example.com" required />
+    </form>
+  </div>
+</BrowserWindow>
+
+### Number Input (`type="number"`)
+
+For numeric data, supporting attributes like `min`, `max`, and `step`.
+
+```html title="number-input.html"
+<form>
+  <label for="quantity">Quantity:</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="100" step="1">
+</form>
+```
+
+<BrowserWindow url="http://.../number-input.html">
+  <div>
+    <form>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="100" step="1" />
+    </form>
+  </div>
+</BrowserWindow>
+
+### URL Input (`type="url"`)
+
+Validates that input matches URL format.
+
+```html title="url-input.html"
+<form>
+  <label for="website">Website:</label>
+  <input type="url" id="website" name="website" placeholder="https://example.com">
+</form>
+```
+
+<BrowserWindow url="http://.../url-input.html">
+  <div>
+    <form>
+      <label for="website">Website:</label>
+      <input type="url" id="website" name="website" placeholder="https://example.com" />
+    </form>
+  </div>
+</BrowserWindow>
+
+## 📆 Date and Time Input Types
+
+### Date Input (`type="date"`)
+Provides a date picker interface.
+
+```html title="date-input.html"
+<form>
+  <label for="appointment">Appointment Date:</label>
+  <input type="date" id="appointment" name="appointment">
+</form>
+```
+
+<BrowserWindow url="http://.../date-input.html">
+  <div>
+    <form>
+      <label for="appointment">Appointment Date:</label>
+      <input type="date" id="appointment" name="appointment" />
+    </form>
+  </div>
+</BrowserWindow>
+
+### Time Input (`type="time"`)
+
+Allows users to select a specific time.
+
+```html title="time-input.html"
+<form>
+  <label for="meeting">Meeting Time:</label>
+  <input type="time" id="meeting" name="meeting">
+</form>
+```
+
+<BrowserWindow url="http://.../time-input.html">
+  <div>
+    <form>
+      <label for="meeting">Meeting Time:</label>
+      <input type="time" id="meeting" name="meeting" />
+    </form>
+  </div>
+</BrowserWindow>
+
+## 🔘 Specialized Input Types
+
+### Color Input (`type="color"`)
+
+Enables color selection using a color picker.
+
+```html title="color-input.html"
+<form>
+  <label for="favcolor">Choose a color:</label>
+  <input type="color" id="favcolor" name="favcolor">
+</form>
+```
+
+<BrowserWindow url="http://.../color-input.html">
+  <div>
+    <form>
+      <label for="favcolor">Choose a color:</label>
+      <input type="color" id="favcolor" name="favcolor" />
+    </form>
+  </div>
+</BrowserWindow>
+
+### Range Input (`type="range"`)
+
+Presents a slider for selecting a numerical range.
+
+```html title="range-input.html"
+<form>
+  <label for="volume">Volume:</label>
+  <input type="range" id="volume" name="volume" min="0" max="100" step="10">
+</form>
+```
+
+<BrowserWindow url="http://.../range-input.html">
+  <div>
+    <form>
+      <label for="volume">Volume:</label>
+      <input type="range" id="volume" name="volume" min="0" max="100" step="10" />
+    </form>
+  </div>
+</BrowserWindow>
+
+## 📅 Week and Month Input Types
+
+### Week Input (`type="week"`)
+
+Selects a specific week in a year.
+
+```html title="week-input.html"
+<form>
+  <label for="work-week">Work Week:</label>
+  <input type="week" id="work-week" name="work-week">
+</form>
+```
+
+<BrowserWindow url="http://.../week-input.html">
+  <div>
+    <form>
+      <label for="work-week">Work Week:</label>
+      <input type="week" id="work-week" name="work-week" />
+    </form>
+  </div>
+</BrowserWindow>
+
+### Month Input (`type="month"`)
+
+Allows selection of a specific month and year.
+
+```html title="month-input.html"
+<form>
+  <label for="billing-month">Billing Month:</label>
+  <input type="month" id="billing-month" name="billing-month">
+</form>
+```
+
+<BrowserWindow url="http://.../month-input.html">
+  <div>
+    <form>
+      <label for="billing-month">Billing Month:</label>
+      <input type="month" id="billing-month" name="billing-month" />
+    </form>
+  </div>
+</BrowserWindow>
+
+## 📁 File Input
+The `<input type="file">` element lets users upload files.
+
+```html title="file-input.html"
+<form>
+  <label for="resume">Upload Resume:</label>
+  <input type="file" id="resume" name="resume" accept=".pdf, .docx">
+</form>
+```
+
+<BrowserWindow url="http://.../file-input.html">
+  <div>
+    <form>
+      <label for="resume">Upload Resume:</label>
+      <input type="file" id="resume" name="resume" accept=".pdf, .docx" />
+    </form>
+  </div>
+</BrowserWindow>
+
+## 🎤 Search Input (`type="search"`)
+
+Styled similarly to text inputs but optimized for search.
+
+```html title="search-input.html"
+<form>
+  <label for="search">Search:</label>
+  <input type="search" id="search" name="search" placeholder="Search...">
+</form>
+```
+
+<BrowserWindow url="http://.../search-input.html">
+  <div>
+    <form>
+      <label for="search">Search:</label>
+      <input type="search" id="search" name="search" placeholder="Search..." />
+    </form>
+  </div>
+</BrowserWindow>
+
+## Hidden Input (`type="hidden"`)
+
+Stores data without displaying it on the form.
+
+```html title="hidden-input.html"
+<form>
+  <input type="hidden" name="user_id" value="12345">
+</form>
+```
+
+## 📝 Summary
+
+Understanding and leveraging various HTML input types enhances form functionality, improves user experience, and ensures more accurate data collection.
