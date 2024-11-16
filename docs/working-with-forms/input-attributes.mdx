@@ -1,0 +1,165 @@
+---
+sidebar_position: 4
+---
+
+# 🙋🏻 HTML Input Attributes
+
+HTML input attributes help refine and control user input by adding constraints and additional behaviors to form fields. This guide provides an overview of essential input attributes and their practical applications.
+
+## 🏷 Commonly Used Input Attributes
+
+### 1. `placeholder`
+Provides a short hint that describes the expected value of the input field.
+
+```html title="placeholder-example.html"
+<input type="text" placeholder="Enter your name">
+```
+
+<BrowserWindow url="http://.../placeholder-example.html" minHeight="300px">
+    <input type="text" placeholder="Enter your name" />
+</BrowserWindow>
+
+### 2. `required`
+Specifies that the input field must be filled out before submitting the form.
+
+```html title="required-example.html"
+<input type="email" required>
+```
+
+### 3. `disabled`
+Disables the input field, preventing user interaction.
+
+```html title="disabled-example.html"
+<input type="text" value="Read-only field" disabled>
+```
+
+<BrowserWindow url="http://.../disabled-example.html" minHeight="300px">
+    <input type="text" value="Read-only field" disabled />
+</BrowserWindow>
+
+### 4. `readonly`
+Makes the input field non-editable, but its value can still be copied.
+
+```html title="readonly-example.html"
+<input type="text" value="This is readonly" readonly>
+```
+
+<BrowserWindow url="http://.../readonly-example.html" minHeight="300px">
+    <input type="text" value="This is readonly" readonly />
+</BrowserWindow>
+
+### 5. `maxlength`
+Limits the number of characters allowed in the input field.
+
+```html title="maxlength-example.html"
+<input type="text" maxlength="10" placeholder="Max 10 characters">
+```
+
+<BrowserWindow url="http://.../maxlength-example.html" minHeight="300px">
+    <input type="text" maxlength="10" placeholder="Max 10 characters" />
+</BrowserWindow>
+
+### 6. `min` and `max`
+Defines the minimum and maximum values for numeric, date, or range input types.
+
+```html title="min-max-example.html"
+<input type="number" min="1" max="100">
+<input type="date" min="2023-01-01" max="2024-12-31">
+```
+
+<BrowserWindow url="http://.../min-max-example.html" minHeight="300px">
+  <>
+    <input type="number" min="1" max="100" />
+    <input type="date" min="2023-01-01" max="2024-12-31" />
+  </>
+</BrowserWindow>
+
+### 7. `pattern`
+Specifies a regular expression that the input value must match.
+
+```html title="pattern-example.html"
+<input type="text" pattern="[A-Za-z]{3,}" title="Enter at least 3 letters">
+```
+
+<BrowserWindow url="http://.../pattern-example.html" minHeight="300px">
+    <input type="text" pattern="[A-Za-z]{3,}" title="Enter at least 3 letters" />
+</BrowserWindow>
+
+### 8. `autofocus`
+Automatically focuses the input field when the page loads.
+
+```html title="autofocus-example.html"
+<input type="text" autofocus>
+```
+
+<BrowserWindow url="http://.../autofocus-example.html" minHeight="300px">
+    <input type="text" autofocus />
+</BrowserWindow>
+
+### 9. `step`
+Defines the increment step for `number`, `date`, `time`, and `range` input types.
+
+```html title="step-example.html"
+<input type="number" min="0" max="100" step="5">
+```
+
+<BrowserWindow url="http://.../step-example.html" minHeight="300px">
+    <input type="number" min="0" max="100" step="5" />
+</BrowserWindow>
+
+## 🛠 Advanced Input Attributes
+
+### 1. `list`
+Specifies a list of predefined options suggested to the user while typing. This attribute works with the `<datalist>` element.
+
+```html title="list-datalist-example.html"
+<input type="text" list="browsers" placeholder="Choose a browser">
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Safari">
+  <option value="Edge">
+</datalist>
+```
+
+<BrowserWindow url="http://.../list-datalist-example.html" minHeight="300px">
+  <>
+    <input type="text" list="browsers" placeholder="Choose a browser" />
+    <datalist id="browsers">
+      <option value="Chrome" />
+      <option value="Firefox" />
+      <option value="Safari" />
+      <option value="Edge" />
+    </datalist>
+  </>
+</BrowserWindow>
+
+### 2. `multiple`
+Allows the user to select multiple options in input types like `email` and `file`.
+
+```html title="multiple-example.html"
+<input type="email" multiple placeholder="Enter multiple emails">
+<input type="file" multiple>
+```
+
+<BrowserWindow url="http://.../multiple-example.html" minHeight="300px">
+  <>
+    <input type="email" multiple placeholder="Enter multiple emails" />
+    <input type="file" multiple />
+  </>
+</BrowserWindow>
+
+### 3. `size`
+Sets the width of the input field in terms of character count.
+
+```html title="size-example.html"
+<input type="text" size="30">
+```
+
+<BrowserWindow url="http://.../size-example.html" minHeight="300px">
+    <input type="text" size="30" />
+</BrowserWindow>
+
+## 📝 Summary
+
+Using the right input attributes in your HTML forms ensures better user experience, validation, and input control. Understanding these attributes allows developers to create more interactive and reliable web forms.

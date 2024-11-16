@@ -1,0 +1,151 @@
+---
+sidebar_position: 5
+---
+
+# 🙋🏻 HTML Form Validation
+
+HTML form validation ensures that user input meets specific criteria before the form can be submitted. This guide outlines the built-in validation attributes, JavaScript techniques, and best practices for validating user input in HTML forms.
+
+## 📜 Built-in HTML Validation Attributes
+HTML provides several built-in attributes for form validation:
+
+### 1. `required`
+Ensures that the input field is not empty before form submission.
+
+```html title="required-example.html"
+<form>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <button type="submit">Submit</button>
+</form>
+```
+
+<BrowserWindow url="http://.../required-example.html">
+  <>
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <button type="submit">Submit</button>
+    </form>
+  </>
+</BrowserWindow>
+
+### 2. `pattern`
+Specifies a regular expression that the input must match.
+
+```html title="pattern-example.html"
+<form>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" pattern="[A-Za-z0-9]{5,}" title="Must be at least 5 alphanumeric characters">
+  <button type="submit">Submit</button>
+</form>
+```
+
+<BrowserWindow url="http://.../pattern-example.html">
+  <>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" pattern="[A-Za-z0-9]{5,}" title="Must be at least 5 alphanumeric characters" />
+      <button type="submit">Submit</button>
+    </form>
+  </>
+</BrowserWindow>
+
+### 3. `min` and `max`
+Set the minimum and maximum values for number or date input fields.
+
+```html title="min-max-example.html"
+<form>
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age" min="18" max="100" required>
+  <button type="submit">Submit</button>
+</form>
+```
+
+<BrowserWindow url="http://.../min-max-example.html">
+  <>
+    <form>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="18" max="100" required />
+      <button type="submit">Submit</button>
+    </form>
+  </>
+</BrowserWindow>
+
+### 4. `minlength` and `maxlength`
+Define the minimum and maximum number of characters allowed in text-based inputs.
+
+```html title="minlength-maxlength-example.html"
+<form>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" minlength="8" maxlength="16" required>
+  <button type="submit">Submit</button>
+</form>
+```
+
+<BrowserWindow url="http://.../minlength-maxlength-example.html">
+  <>
+    <form>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" minlength="8" maxlength="16" required />
+      <button type="submit">Submit</button>
+    </form>
+  </>
+</BrowserWindow>
+
+### 5. `type`
+Using the appropriate input type (`email`, `url`, `number`, etc.) enables browser-based validation.
+
+```html title="type-validation-example.html"
+<form>
+  <label for="website">Website:</label>
+  <input type="url" id="website" name="website" required>
+  <button type="submit">Submit</button>
+</form>
+```
+
+<BrowserWindow url="http://.../type-validation-example.html">
+  <>
+    <form>
+      <label for="website">Website:</label>
+      <input type="url" id="website" name="website" required />
+      <button type="submit">Submit</button>
+    </form>
+  </>
+</BrowserWindow>
+
+## ⚙️ JavaScript Custom Validation
+For more complex validation logic, JavaScript provides flexibility to create custom validation.
+
+### Example: Custom Validation with JavaScript
+```html title="custom-validation-example.html"
+<form id="signupForm">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <span id="error-message" style="color: red;"></span>
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  document.getElementById('signupForm').addEventListener('submit', function(event) {
+    const username = document.getElementById('username').value;
+    const errorMessage = document.getElementById('error-message');
+
+    if (username.length < 5) {
+      event.preventDefault();
+      errorMessage.textContent = 'Username must be at least 5 characters long';
+    } else {
+      errorMessage.textContent = '';
+    }
+  });
+</script>
+```
+
+## 🛡 Best Practices for Form Validation
+- **Combine HTML and JavaScript validation**: Rely on HTML for basic validation and JavaScript for advanced, custom checks.
+- **Provide user feedback**: Show helpful error messages to guide users in correcting their input.
+- **Ensure accessibility**: Make sure error messages are accessible to screen readers.
+- **Validate on both client and server sides**: Client-side validation enhances user experience, while server-side validation ensures security and data integrity.
+
+## 📝 Summary
+HTML's built-in attributes, combined with custom JavaScript, create robust and user-friendly form validation. Implementing these best practices ensures forms are both functional and secure.
