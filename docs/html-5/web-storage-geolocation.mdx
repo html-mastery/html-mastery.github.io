@@ -1,0 +1,205 @@
+---
+sidebar_position: 6
+---
+
+import MyFirstHTML5WebStorageEx1 from '../_scripts/MyFirstHTML5WebStorageEx1';
+import MyFirstHTML5WebStorageEx2 from '../_scripts/MyFirstHTML5WebStorageEx2';
+import MyFirstHTML5WebStorageEx3 from '../_scripts/MyFirstHTML5WebStorageEx3';
+import MyFirstHTML5WebStorageEx4 from '../_scripts/MyFirstHTML5WebStorageEx4';
+
+# 🙋🏻 Web Storage & Geolocation
+
+HTML5 introduces new APIs that allow web developers to store data locally on the user's device and access the user's location information. These APIs, known as the Web Storage API and the Geolocation API, provide developers with powerful tools for creating faster, more responsive, and location-aware web applications.
+
+## Web Storage API
+
+The Web Storage API provides a way to store data locally on the user's device. It allows developers to store key-value pairs in the browser, making web applications faster and more responsive. The Web Storage API provides two storage mechanisms: `localStorage` and `sessionStorage`.
+
+### localStorage
+
+The `localStorage` object allows developers to store data with no expiration date. The data stored in `localStorage` will persist even after the browser is closed and reopened. This makes `localStorage` ideal for storing user preferences, settings, and other data that should persist across browser sessions.
+
+Here's an example of how you can use `localStorage` to store and retrieve data in a web application:
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Web Storage Example</title>
+</head>
+<body>
+    <h1>My First Web Storage Example</h1>
+    <button onclick="saveData()">Save Data</button>
+    <button onclick="retrieveData()">Retrieve Data</button>
+    <p id="output"></p>
+    <script>
+        function saveData() {
+            localStorage.setItem('name', 'John Doe');
+            localStorage.setItem('email', 'john@example.com');
+        }
+
+        function retrieveData() {
+            const name = localStorage.getItem('name');
+            const email = localStorage.getItem('email');
+            document.getElementById('output').textContent = `Name: ${name}, Email: ${email}`;
+        }
+    </script>
+</body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+    <MyFirstHTML5WebStorageEx1 />
+</BrowserWindow>
+
+In this example, we've used the `localStorage` object to store and retrieve data in a web application. We've created two functions, `saveData()` and `retrieveData()`, that store and retrieve the user's name and email address using the `setItem()` and `getItem()` methods of the `localStorage` object.
+
+### sessionStorage
+
+The `sessionStorage` object allows developers to store data for the duration of a browser session. The data stored in `sessionStorage` will be cleared when the browser tab is closed or the session ends. This makes `sessionStorage` ideal for storing temporary data that should not persist across browser sessions.
+
+Here's an example of how you can use `sessionStorage` to store and retrieve data in a web application:
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Web Storage Example</title>
+</head>
+<body>
+    <h1>My First Web Storage Example</h1>
+    <button onclick="saveData()">Save Data</button>
+    <button onclick="retrieveData()">Retrieve Data</button>
+    <p id="output"></p>
+    <script>
+        function saveData() {
+            sessionStorage.setItem('name', 'Jane Doe');
+            sessionStorage.setItem('email', 'john@example.com
+        }
+
+        function retrieveData() {
+            const name = sessionStorage.getItem('name');
+            const email = sessionStorage.getItem('email');
+            document.getElementById('output').textContent = `Name: ${name}, Email: ${email}`;
+        }
+    </script>
+</body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+    <MyFirstHTML5WebStorageEx2 />
+</BrowserWindow>
+
+In this example, we've used the `sessionStorage` object to store and retrieve data in a web application. We've created two functions, `saveData()` and `retrieveData()`, that store and retrieve the user's name and email address using the `setItem()` and `getItem()` methods of the `sessionStorage` object.
+
+By using the Web Storage API, you can store data locally on the user's device, making web applications faster and more responsive. The `localStorage` and `sessionStorage` objects provide powerful tools for storing user preferences, settings, and other data that enhance the user experience of your web applications.
+
+## Geolocation API
+
+The Geolocation API provides a way to access the user's location information in a web application. It allows developers to retrieve the user's latitude and longitude coordinates, making it easier to create location-aware web applications. The Geolocation API provides two methods for retrieving the user's location: `getCurrentPosition()` and `watchPosition()`.
+
+### getCurrentPosition()
+
+The `getCurrentPosition()` method retrieves the user's current location once. It takes a success callback function and an error callback function as arguments. The success callback function is called when the user's location is successfully retrieved, while the error callback function is called when an error occurs.
+
+Here's an example of how you can use the `getCurrentPosition()` method to retrieve the user's location in a web application:
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Geolocation Example</title>
+</head>
+
+<body>
+    <h1>My First Geolocation Example</h1>
+    <button onclick="getLocation()">Get Location</button>
+    <p id="output"></p>
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById('output').textContent = 'Geolocation is not supported by this browser.';
+            }
+        }
+
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            document.getElementById('output').textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+        }
+
+        function showError(error) {
+            document.getElementById('output').textContent = `Error: ${error.message}`;
+        }
+    </script>
+</body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+    <MyFirstHTML5WebStorageEx3 />
+</BrowserWindow>
+
+In this example, we've used the `getCurrentPosition()` method to retrieve the user's location in a web application. We've created two functions, `showPosition()` and `showError()`, that display the user's latitude and longitude coordinates or an error message, respectively.
+
+### watchPosition()
+
+The `watchPosition()` method continuously monitors the user's location and updates it in real-time. It takes a success callback function and an error callback function as arguments, similar to the `getCurrentPosition()` method. The success callback function is called each time the user's location is updated, while the error callback function is called when an error occurs.
+
+Here's an example of how you can use the `watchPosition()` method to continuously monitor the user's location in a web application:
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Geolocation Example</title>
+</head>
+
+<body>
+    <h1>My First Geolocation Example</h1>
+    <button onclick="startTracking()">Start Tracking</button>
+    <button onclick="stopTracking()">Stop Tracking</button>
+    <p id="output"></p>
+    <script>
+        let watchId;
+
+        function startTracking() {
+            if (navigator.geolocation) {
+                watchId = navigator.geolocation.watchPosition(showPosition, showError);
+            } else {
+                document.getElementById('output').textContent = 'Geolocation is not supported by this browser.';
+            }
+        }
+
+        function stopTracking() {
+            navigator.geolocation.clearWatch(watchId);
+        }
+
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            document.getElementById('output').textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+        }
+
+        function showError(error) {
+            document.getElementById('output').textContent = `Error: ${error.message}`;
+        }
+    </script>
+</body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+    <MyFirstHTML5WebStorageEx4 />
+</BrowserWindow>
+
+In this example, we've used the `watchPosition()` method to continuously monitor the user's location in a web application. We've created two functions, `startTracking()` and `stopTracking()`, that start and stop tracking the user's location using the `watchPosition()` method. We've also created `showPosition()` and `showError()` functions to display the user's location or an error message, respectively.
+
+By using the Geolocation API, you can access the user's location information in a web application, making it easier to create location-aware web applications. The `getCurrentPosition()` and `watchPosition()` methods provide powerful tools for retrieving the user's latitude and longitude coordinates and updating them in real-time.
+
+## Conclusion
+
+HTML5 introduces new APIs that allow web developers to store data locally on the user's device and access the user's location information. By using the Web Storage API and the Geolocation API, you can create faster, more responsive, and location-aware web applications that provide a more engaging user experience for your website visitors. These APIs provide powerful tools for storing data locally and accessing the user's location, making it easier to create dynamic and interactive web applications.

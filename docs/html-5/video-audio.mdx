@@ -1,0 +1,72 @@
+---
+sidebar_position: 4
+---
+
+import MyFirstHTML5Video from '../_scripts/MyFirstHTML5Video';
+import MyFirstHTML5Audio from '../_scripts/MyFirstHTML5Audio';
+
+# 🙋🏻 HTML5 Video and Audio
+
+HTML5 introduces native support for embedding video and audio content in web pages using the `<video>` and `<audio>` elements. These elements allow you to embed multimedia content directly in your web pages without the need for third-party plugins like Flash.
+
+## Video Element
+
+The `<video>` element is used to embed video content in a web page. It supports various video formats, such as MP4, WebM, and Ogg, and provides controls for playing, pausing, and seeking the video.
+
+Here's an example of how you can use the `<video>` element to embed a video in an HTML document:
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First HTML5 Video</title>
+</head>
+<body>
+    <h1>My First HTML5 Video</h1>
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <MyFirstHTML5Video />
+</BrowserWindow>
+
+In this example, we've used the `<video>` element to embed a video in an HTML document. The `controls` attribute adds playback controls to the video, allowing users to play, pause, and seek the video. The `<source>` element specifies the video file to be played and its format.
+
+## Audio Element
+
+The `<audio>` element is used to embed audio content in a web page. It supports various audio formats, such as MP3, WAV, and Ogg, and provides controls for playing, pausing, and adjusting the volume of the audio.
+
+Here's an example of how you can use the `<audio>` element to embed an audio file in an HTML document:
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First HTML5 Audio</title>
+</head>
+<body>
+    <h1>My First HTML5 Audio</h1>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+</body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <MyFirstHTML5Audio />
+</BrowserWindow>
+
+In this example, we've used the `<audio>` element to embed an audio file in an HTML document. The `controls` attribute adds playback controls to the audio, allowing users to play, pause, and adjust the volume of the audio. The `<source>` element specifies the audio file to be played and its format.
+
+By using the `<video>` and `<audio>` elements, you can embed video and audio content directly in your web pages, making them more engaging and interactive for your website visitors. These elements provide native support for multimedia content, making it easier to create rich media experiences without the need for third-party plugins.
+
+## Conclusion
+
+HTML5 introduces native support for embedding video and audio content in web pages using the `<video>` and `<audio>` elements. By using these elements, you can embed multimedia content directly in your web pages without the need for third-party plugins like Flash. This makes it easier to create rich media experiences that are engaging and interactive for your website visitors.

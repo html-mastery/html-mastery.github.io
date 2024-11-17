@@ -1,0 +1,63 @@
+---
+sidebar_position: 3
+---
+
+import MyFirstHTML5Form from '../_scripts/MyFirstHTML5Form';
+
+# 🙋🏻 HTML5 New Form Elements
+
+HTML5 introduces new form elements that make it easier to create interactive and user-friendly forms. These elements include new input types, attributes, and validation features that improve the user experience when filling out forms.
+
+Some of the new form elements introduced in HTML5 include:
+
+- `input[type="email"]`: This input type is used for entering an email address.
+- `input[type="url"]`: This input type is used for entering a URL.
+- `input[type="tel"]`: This input type is used for entering a telephone number.
+- `input[type="number"]`: This input type is used for entering a number.
+- `input[type="date"]`: This input type is used for entering a date.
+- `input[type="time"]`: This input type is used for entering a time.
+- `input[type="color"]`: This input type is used for selecting a color.
+- `input[type="range"]`: This input type is used for selecting a range of values.
+- `input[type="search"]`: This input type is used for entering a search query.
+- `input[type="file"]`: This input type is used for uploading files.
+
+By using these new form elements, you can create more interactive and user-friendly forms that provide a better user experience for your website visitors. These elements also provide built-in validation features that help ensure that users enter the correct type of data in each field.
+
+## Example
+
+Here's an example of how you can use these new form elements in an HTML form:
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First HTML5 Form</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <MyFirstHTML5Form />
+</BrowserWindow>
+
+In this example, we've used the `input[type="email"]`, `input[type="tel"]`, and `textarea` elements to create a simple contact form. The `required` attribute is used to make the `name`, `email`, and `message` fields required, ensuring that users must enter data in these fields before submitting the form.
+
+By using these new form elements and attributes, you can create more interactive and user-friendly forms that provide a better user experience for your website visitors. These elements also provide built-in validation features that help ensure that users enter the correct type of data in each field.
+
+## Conclusion
+
+HTML5 introduces new form elements that make it easier to create interactive and user-friendly forms. By using these new elements and attributes, you can create more interactive and user-friendly forms that provide a better user experience for your website visitors. These elements also provide built-in validation features that help ensure that users enter the correct type of data in each field. This can help improve the usability and accessibility of your web forms, making them more user-friendly and accessible to a wider audience.

@@ -1,0 +1,59 @@
+---
+sidebar_position: 5
+---
+
+import MyFirstHTML5Canvas from '../_scripts/MyFirstHTML5Canvas';
+
+# 🙋🏻 HTML Graphics
+
+HTML5 introduces new graphics elements and APIs that allow developers to create interactive graphics and animations directly in the browser. These elements and APIs provide powerful tools for creating visually rich and engaging web applications.
+
+Some of the new graphics elements and APIs introduced in HTML5 include:
+
+- **Canvas Element**: The `<canvas>` element is used to draw graphics, animations, and interactive content directly in the browser using JavaScript. It provides a drawing surface that can be manipulated with JavaScript to create custom graphics and animations.
+
+- **SVG Element**: The `<svg>` element is used to embed scalable vector graphics (SVG) in a web page. SVG is a markup language for describing two-dimensional graphics and animations that can be scaled to any size without losing quality. The `<svg>` element provides a powerful tool for creating high-quality graphics and animations in web applications.
+
+- **WebGL API**: The WebGL API is a JavaScript API for rendering 3D graphics in a web browser. It provides a low-level interface to the graphics hardware, allowing developers to create high-performance 3D graphics and animations directly in the browser.
+
+By using these new graphics elements and APIs, you can create visually rich and interactive web applications that provide a more engaging user experience for your website visitors. These elements and APIs provide powerful tools for creating custom graphics, animations, and visual effects that enhance the look and feel of your web applications.
+
+## Example
+
+Here's an example of how you can use the `<canvas>` element to draw a simple graphic in an HTML document:
+
+```html title="index.html"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First HTML5 Canvas</title>
+</head>
+<body>
+    <h1>My First HTML5 Canvas</h1>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'lightblue';
+            ctx.fillRect(0, 0, 200, 100);
+            ctx.fillStyle = 'black';
+            ctx.font = '20px Arial';
+            ctx.fillText('Hello Canvas', 50, 50);
+        }
+    </script>
+</body>
+</html>
+```
+
+<BrowserWindow url="http://.../index.html">
+  <MyFirstHTML5Canvas />
+</BrowserWindow>
+
+In this example, we've used the `<canvas>` element to draw a simple graphic in an HTML document. We've created a canvas with a width of 200 pixels and a height of 100 pixels and used the `getContext('2d')` method to get a 2D drawing context for the canvas. We've then used the `fillRect()` and `fillText()` methods to draw a blue rectangle and text on the canvas.
+
+By using the `<canvas>` element and JavaScript, you can create custom graphics and animations directly in the browser, making your web applications more visually engaging and interactive for your website visitors. The `<canvas>` element provides a powerful tool for creating dynamic and interactive graphics that enhance the user experience of your web applications.
+
+## Conclusion
+
+HTML5 introduces new graphics elements and APIs that provide powerful tools for creating custom graphics and animations directly in the browser. By using these elements and APIs, you can create visually rich and interactive web applications that provide a more engaging user experience for your website visitors. These elements and APIs allow you to create high-quality graphics, animations, and visual effects that enhance the look and feel of your web applications.
