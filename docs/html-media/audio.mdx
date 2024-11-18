@@ -1,0 +1,81 @@
+---
+id: audio
+title: HTML Audio Element
+sidebar_label: 🙋🏻 Audio
+description: HTML Audio Element is used to embed sound content in a document.
+tags: ['html', 'audio']
+keywords: ['html', 'audio', 'audio element', 'html audio element']
+sidebar_position: 2
+---
+
+Audio element is used to embed sound content in a document. It may contain one or more audio sources, represented using the src attribute or the source element: the browser will choose the most suitable one.
+
+## Syntax
+
+```html title="Syntax"
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+  <source src="audio.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio>
+```
+
+## Attributes
+
+- **autoplay**: It is a boolean attribute. If specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.
+- **controls**: It is a boolean attribute. If specified, the browser will display controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
+- **loop**: It is a boolean attribute. If specified, the audio player will automatically seek back to the start upon reaching the end of the audio.
+- **muted**: It is a boolean attribute. If specified, the audio will be initially silenced.
+
+## Example
+
+```html title="index.html"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Element Example</title>
+</head>
+<body>
+  <h1>Audio Element Example</h1>
+  <audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    <source src="audio.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
+```
+
+<BrowserWindow url="https://.../index.html">
+  <>
+    <h1>Audio Element Example</h1>
+    <audio controls>
+       <source src="/audio/audio.mp3" type="audio/mpeg" />
+       <source src="audio.ogg" type="audio/ogg" />
+       Your browser does not support the audio element.
+    </audio>
+  </>
+</BrowserWindow>
+
+In the above example, the audio element is used to embed sound content in the document. The audio element contains two source elements, one for the MP3 file and another for the OGG file. If the browser does not support the audio element, it will display the message "Your browser does not support the audio element."
+
+## Browser Support
+
+The audio element is supported in all major browsers, including Chrome, Firefox, Safari, and Edge.
+
+## Accessibility
+
+When using the audio element, it is important to provide alternative text or a message for users who cannot access the audio content. This can be done by including text content inside the audio element, as shown in the example above.
+
+## Best Practices
+
+- Provide multiple audio sources in different formats to ensure compatibility with a wide range of browsers.
+- Use the controls attribute to allow users to control audio playback.
+- Provide alternative text or a message for users who cannot access the audio content.
+
+## Conclusion
+
+The audio element is a powerful tool for embedding sound content in a document. By providing multiple audio sources and using the controls attribute, you can create a rich audio experience for your users. Remember to provide alternative text or a message for users who cannot access the audio content, and test your audio content in different browsers to ensure compatibility.
