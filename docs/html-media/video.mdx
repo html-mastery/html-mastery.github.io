@@ -1,0 +1,81 @@
+---
+id: video
+title: HTML Video Element
+sidebar_label: 🙋🏻 Video
+description: HTML Video Element is used to embed video content in a document.
+tags: ['video']
+keywords: ['html', 'video', 'video element', 'html video element']
+sidebar_position: 3
+---
+
+Video element is used to embed video content in a document. It may contain one or more video sources, represented using the src attribute or the source element: the browser will choose the most suitable one.
+
+## Syntax
+
+```html title="Syntax"
+<video controls>
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.ogg" type="video/ogg">
+  Your browser does not support the video element.
+</video>
+```
+
+## Attributes
+
+- **autoplay**: It is a boolean attribute. If specified, the video will automatically begin playback as soon as it can do so, without waiting for the entire video file to finish downloading.
+- **controls**: It is a boolean attribute. If specified, the browser will display controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
+- **loop**: It is a boolean attribute. If specified, the video player will automatically seek back to the start upon reaching the end of the video.
+- **muted**: It is a boolean attribute. If specified, the video will be initially silenced.
+
+## Example
+
+```html title="index.html"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Element Example</title>
+</head>
+<body>
+  <h1>Video Element Example</h1>
+  <video controls>
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.ogg" type="video/ogg">
+    Your browser does not support the video element.
+  </video>
+</body>
+</html>
+```
+
+<BrowserWindow url="https://.../index.html">
+  <>
+    <h1>Video Element Example</h1>
+    <video controls>
+       <source src="/videos/video.mp4" type="video/mp4" />
+       <source src="video.ogg" type="video/ogg" />
+       Your browser does not support the video element.
+    </video>
+  </>
+</BrowserWindow>
+
+## Browser Support
+
+Video element is supported in all major browsers. You can check the browser compatibility [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#browser_compatibility).
+
+## Accessibility
+
+- Always provide a text alternative for video content.
+- Use the `controls` attribute to provide a user interface for controlling the video playback.
+- Use the `autoplay` attribute with caution as it can be annoying for users.
+
+## Resources
+
+- [MDN Web Docs - Video Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
+- [W3Schools - HTML Video](https://www.w3schools.com/html/html5_video.asp)
+- [Can I use - Video Element](https://caniuse.com/video)
+
+## Summary
+
+Video element is used to embed video content in a document. It may contain one or more video sources, represented using the src attribute or the source element: the browser will choose the most suitable one.
